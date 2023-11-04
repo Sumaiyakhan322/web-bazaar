@@ -52,7 +52,7 @@ const googleSignIn=()=>{
     <AuthContext.Provider value={authInfo}>
         {children}
     </AuthContext.Provider>
-);
+)
 };
 AuthProvider.propTypes = {
 children: PropTypes.node,
