@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 
 
 const Card = ({job}) => {
     const {email,jobTile,deadline,category,maximum,minimum,des,img,_id}=job
+   
   
     return (
         <div className="h-full">
@@ -15,7 +17,7 @@ const Card = ({job}) => {
     <p>{deadline}</p>
     <p>{maximum}$-{minimum}$</p>
     <div className="card-actions flex-grow">
-      <button className="btn btn-primary">Bit now</button>
+      <Link to={`/jobs/${_id}`}><button className="btn btn-primary"> Bit </button></Link>
     </div>
   </div>
 </div>
