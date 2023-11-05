@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import img1 from '../../public/404.gif'
+import img1 from '../../src/gif/404.gif'
 
 const Error = () => {
     return (
