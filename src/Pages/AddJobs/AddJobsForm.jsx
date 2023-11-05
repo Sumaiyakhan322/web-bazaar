@@ -19,7 +19,7 @@ const AddJobsForm = () => {
         const maximum=e.target.maximum.value ;
         const des=e.target.des.value ;
         const newProduct={email,jobTile,deadline,category,maximum,minimum,des,img}
-        console.log(newProduct);
+        
         fetch('http://localhost:5000/addJobs',{
             method:'POST',
             headers: {
@@ -34,7 +34,7 @@ const AddJobsForm = () => {
                     Swal.fire({
                         position: 'center',
                         icon: 'success',
-                        title: 'A Product is successfully added',
+                        title: 'A job is successfully added',
                         showConfirmButton: false,
                         timer: 1500
                       })
