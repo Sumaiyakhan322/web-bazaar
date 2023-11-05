@@ -6,6 +6,8 @@ import AddJobs from "../Pages/AddJobs/AddJobs";
 import MyPostedJobs from "../Pages/MyPostedJobs/MyPostedJobs";
 import MyBids from "../Pages/MyBids/MyBids";
 import BidRequests from "../Pages/BidRequests/BidRequests";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
 
 const router = createBrowserRouter([
     {
@@ -16,17 +18,23 @@ const router = createBrowserRouter([
         path:'/',
         element:<Home></Home>
       },{
-        path:'/WebBazaar/AddJobs',
+        path:'/webBazaar/addJobs',
         element:<AddJobs></AddJobs>
       },{
-        path:'/WebBazaar/myPostedJobs',
+        path:'/webBazaar/myPostedJobs',
         element:<MyPostedJobs></MyPostedJobs>
       },{
-        path:'/WebBazaar/myBids',
+        path:'/webBazaar/myBids',
         element:<MyBids></MyBids>
       },{
-        path:'/WebBazaar/bidRequests',
+        path:'/webBazaar/bidRequests',
         element:<BidRequests></BidRequests>
+      },{
+        path:'/login',
+        element:<Login></Login>
+      },{
+        path:'/register',
+        element:<Register></Register>
       }
     
     ]

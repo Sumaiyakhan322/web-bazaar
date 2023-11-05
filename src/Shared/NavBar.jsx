@@ -21,16 +21,16 @@ const NavBar = () => {
      <li className="hover:bg-[#aac7c7]  rounded-lg nav "><NavLink to='/' className={({ isActive, isPending }) =>
  isPending ? "" : isActive ? "text-[#c3bd2e]" : ""
  }>Home</NavLink></li>
-     <li className="hover:bg-[#aac7c7]  rounded-lg nav"><NavLink to='/WebBazaar/AddJobs' className={({ isActive, isPending }) =>
+     <li className="hover:bg-[#aac7c7]  rounded-lg nav"><NavLink to='/webBazaar/addJobs' className={({ isActive, isPending }) =>
  isPending ? "pending" : isActive ? "text-[#c3bd2e]" : ""
  }>Add Jobs</NavLink></li>
-     <li className="hover:bg-[#aac7c7] rounded-lg nav"><NavLink to={`/WebBazaar/myPostedJobs` }className={({ isActive, isPending }) =>
+     <li className="hover:bg-[#aac7c7] rounded-lg nav"><NavLink to={`/webBazaar/myPostedJobs` }className={({ isActive, isPending }) =>
  isPending ? "pending" : isActive ? "text-[#c3bd2e]" : ""
  }>My posted jobs</NavLink></li>
-     <li className="hover:bg-[#aac7c7] rounded-lg nav"><NavLink to={`/WebBazaar/myBids` }className={({ isActive, isPending }) =>
+     <li className="hover:bg-[#aac7c7] rounded-lg nav"><NavLink to={`/webBazaar/myBids` }className={({ isActive, isPending }) =>
  isPending ? "pending" : isActive ? "text-[#c3bd2e]" : ""
  }>My Bids</NavLink></li>
-     <li className="hover:bg-[#aac7c7] rounded-lg nav"><NavLink to={`/WebBazaar/bidRequests` }className={({ isActive, isPending }) =>
+     <li className="hover:bg-[#aac7c7] rounded-lg nav"><NavLink to={`/webBazaar/bidRequests` }className={({ isActive, isPending }) =>
  isPending ? "pending" : isActive ? "text-[#c3bd2e]" : ""
  }>Bid Requests</NavLink></li>
  </>
@@ -58,10 +58,10 @@ const NavBar = () => {
             <>
              <div className="flex items-center space-x-2">
              <div className="flex items-center space-x-2 flex-col-reverse">
-               <p className="font-bold text-lg ">{user?. displayName}</p>
+               <p className="font-bold text-lg  text-[#c3bd2e]">{user?. displayName}</p>
                 <img src={user?.photoURL} alt="" className="md:h-20 md:w-20 h-10 w-10 rounded-full"/>
                </div>
-                <button className="btn text-[#146666] hover:bg-white hover:text-red-400 font-bold border  hover:border-#c3bd2e " onClick={handleSignOut}>SignOut</button>
+                <button className="btn text-[#146666] hover:bg-white  font-bold border  hover:border-#c3bd2e " onClick={handleSignOut}>SignOut</button>
              </div>
               
             </>
