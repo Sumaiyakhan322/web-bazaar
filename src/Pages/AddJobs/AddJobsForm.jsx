@@ -7,16 +7,17 @@ import { useNavigate } from 'react-router-dom';
 const AddJobsForm = () => {
     const navigate=useNavigate()
     const {user}=useContext(AuthContext)
+    const userEmail=user?.email;
     const handleAdd=e=>{
         e.preventDefault();
-        const email=user?.email  || {};
-        const jobTile=e.target.jobTile.value || {};
-        const img=e.target.img.value || {};
-        const deadline=e.target.deadline.value || {};
-        const category=e.target.category.value || {};
-        const minimum=e.target.minimum.value || {};
-        const maximum=e.target.maximum.value || {};
-        const des=e.target.des.value || {};
+        const email=user?.email  ;
+        const jobTile=e.target.jobTile.value ;
+        const img=e.target.img.value;
+        const deadline=e.target.deadline.value ;
+        const category=e.target.category.value ;
+        const minimum=e.target.minimum.value ;
+        const maximum=e.target.maximum.value ;
+        const des=e.target.des.value ;
         const newProduct={email,jobTile,deadline,category,maximum,minimum,des,img}
         console.log(newProduct);
         fetch('http://localhost:5000/addJobs',{
@@ -58,7 +59,7 @@ const AddJobsForm = () => {
           <div className="relative h-12 w-full flex items-center justify-center gap-2">
           <label htmlFor="email" className='text-[#194a63] font-bold'>Email:</label><input
       className="border border-[#c3bd2e] input input-bordered w-full"
-      type='email' name="email" readOnly value={user?.email} id='email' 
+      type='email' name="email" readOnly value={userEmail ? userEmail :''} id='email' 
     />
    
    
