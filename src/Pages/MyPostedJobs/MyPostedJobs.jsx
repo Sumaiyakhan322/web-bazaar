@@ -80,7 +80,7 @@ const MyPostedJobs = () => {
     <p>{job.maximum}$-{job.minimum}$</p>
     <div className="card-actions flex-grow">
       <button className="btn btn-primary" onClick={()=>handleDelete(job._id)}>Delete</button>
-      <button className="btn btn-primary" >Update</button>
+      <Link to={`/update/${job._id}`}><button className="btn btn-primary" >Update</button></Link>
     </div>
   </div>
 </div>
