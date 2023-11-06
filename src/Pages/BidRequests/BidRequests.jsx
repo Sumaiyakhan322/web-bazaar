@@ -8,7 +8,7 @@ const BidRequests = () => {
     return (
         <div>
             <NavBar></NavBar>
-           Bid request 
+               Bid request 
            <Footer></Footer>
         </div>
     );
