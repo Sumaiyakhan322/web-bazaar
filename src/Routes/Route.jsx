@@ -27,7 +27,8 @@ const router = createBrowserRouter([
         element:<MyPostedJobs></MyPostedJobs>
       },{
         path:'/webBazaar/myBids',
-        element:<MyBids></MyBids>
+        element:<MyBids></MyBids>,
+        loader:()=>fetch(`https://server-psi-navy.vercel.app/usersBids`)
       },{
         path:'/webBazaar/bidRequests',
         element:<BidRequests></BidRequests>

@@ -2,16 +2,17 @@ import  { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 import { useQuery } from '@tanstack/react-query';
 import Loading from '../../Loading';
+import Swal from 'sweetalert2';
 
 const BidRequestTable = () => {
     const { user } = useContext(AuthContext);
+    
   
   
-  
-    const { isPending, error, data } = useQuery({
+    const { isPending, error, data,refetch } = useQuery({
       queryKey: ["bidJobs"],
       queryFn:  async() =>{
-     return  await fetch(`http://localhost:5000/usersBids?buyerEmail=${user?.email}`)
+     return  await fetch(`http://localhost:5000/usersBids`)
      .then(
       (res) => res.json(),)
      
@@ -20,8 +21,73 @@ const BidRequestTable = () => {
     });
   
     if (isPending) return <Loading></Loading>;
+
+
   
     if (error) return "An error has occurred: " + error.message;
+
+    const bids=data.filter(bid=>bid.buyerEmail==user?.email)
+    const handleAccept=(_id)=>{
+      const status='In progress';
+      const disable='false' ;
+      const newStatusDisable={status,disable}
+      
+      fetch(`http://localhost:5000/usersBids/${_id}`,{
+        method:'PATCH',
+        headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newStatusDisable),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if(data.modifiedCount>0){
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'A Product is successfully added',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
+            refetch()
+          });
+        
+    
+}
+
+    
+    const handleReject=(_id)=>{
+      const status='Rejected';
+      const disable='false' ;
+      const newStatusDisable={status,disable}
+      
+      fetch(`http://localhost:5000/usersBids/${_id}`,{
+        method:'PATCH',
+        headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newStatusDisable),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if(data.modifiedCount>0){
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'A Product is successfully added',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
+           refetch()
+            
+          });
+        
+    
+}
     return (
         <div>
                <div className="overflow-x-auto">
@@ -38,15 +104,16 @@ const BidRequestTable = () => {
       </tr>
     </thead>
     <tbody>
-      {data.map(bid=>(
+      {bids.map(bid=>(
         <tr key={bid._id}>
         <td>{bid.jobTile}</td>
-        <td>{bid.buyerEmail}</td>
+        <td>{bid.userEmail}</td>
         <td>{bid.deadline}</td>
         <td>{bid.price}</td>
         <td>{bid.status}</td>
-        <td><button className='btn btn-secondary'>Accept</button></td>
-        <td><button className='btn btn-secondary'>Reject</button></td>
+       
+        {(bid.disable==='true' && bid.status==='pending') && <><td><button className='btn btn-secondary' onClick={()=>handleAccept(bid._id)}>Accept</button></td>
+        <td><button className='btn btn-secondary' onClick={()=>handleReject(bid._id)}>Reject</button></td></>  }
       </tr>
 
       ))}
@@ -55,7 +122,7 @@ const BidRequestTable = () => {
      
     </tbody>
   </table>
-</div> 
+               </div> 
         </div>
     );
 };

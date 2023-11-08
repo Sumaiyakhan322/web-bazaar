@@ -1,4 +1,4 @@
-import { useContext} from "react";
+import { useContext, useState} from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import "../../Styles/Disable.css";
@@ -15,7 +15,7 @@ const BidOnProject = () => {
   const userEmail=user?.email
   const newDate=new Date()
   const deadlineDate=new Date(deadline)
-
+  
   const isButtonDisabled = (email===userEmail) || (newDate>deadlineDate) 
   const handleBid = (e) => {
     e.preventDefault();
@@ -45,13 +45,14 @@ const BidOnProject = () => {
                         icon: 'success',
                         title: 'A bid is successfully added',
                         showConfirmButton: false,
-                        timer: 1500
+                        timer: 2500
                       })
                 }
                 
               });
               e.target.reset();
-            navigate('/webBazaar/myBids')
+              
+              navigate('/webBazaar/myBids')
 
     
   };

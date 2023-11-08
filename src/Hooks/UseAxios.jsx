@@ -1,33 +1,33 @@
-import axios from "axios";
-import { useContext } from "react";
-import { useEffect } from "react";
+// import axios from "axios";
+// import { useContext } from "react";
+// import { useEffect } from "react";
 
-import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../Providers/AuthProvider";
+// import { useNavigate } from "react-router-dom";
+// import { AuthContext } from "../Providers/AuthProvider";
 
-const axiosSecure=axios.create({
-    baseURL:`http://localhost:5000`,
-    withCredentials:true
-})
-const UseAxios = () => {
-    const {SignOutUser}=useContext(AuthContext)
-    const navigate=useNavigate()
-    useEffect(()=>{
-       axiosSecure.interceptors.response.use(
-        (res)=>{
-        return res;
-       },
-       (err)=>{
-        console.log(err.response);
-        SignOutUser()
-        .then(()=>{
-            navigate('/login')
-        })
-        .catch()
+// const axiosSecure=axios.create({
+//     baseURL:`http://localhost:5000`,
+//     withCredentials:true
+// })
+// const UseAxios = () => {
+//     const {SignOutUser}=useContext(AuthContext)
+//     const navigate=useNavigate()
+//     useEffect(()=>{
+//        axiosSecure.interceptors.response.use(
+//         (res)=>{
+//         return res;
+//        },
+//        (err)=>{
+//         console.log(err.response);
+//         SignOutUser()
+//         .then(()=>{
+//             navigate('/login')
+//         })
+//         .catch()
         
- })
-    },[SignOutUser,navigate])
-    return axiosSecure
-};
+//  })
+//     },[SignOutUser,navigate])
+//     return axiosSecure
+// };
 
-export default UseAxios;
+// export default UseAxios;
