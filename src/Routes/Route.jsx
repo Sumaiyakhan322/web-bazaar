@@ -10,6 +10,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import JobDetails from "../Pages/JobDetails/JobDetails";
 import UpdateJobs from "../Pages/UpdateJobs/UpdateJobs";
+import Private from "../Private/Private";
 
 const router = createBrowserRouter([
     {
@@ -21,17 +22,17 @@ const router = createBrowserRouter([
         element:<Home></Home>
       },{
         path:'/webBazaar/addJobs',
-        element:<AddJobs></AddJobs>
+        element:<Private><AddJobs></AddJobs></Private>
       },{
         path:'/webBazaar/myPostedJobs',
-        element:<MyPostedJobs></MyPostedJobs>
+        element:<Private><MyPostedJobs></MyPostedJobs></Private>
       },{
         path:'/webBazaar/myBids',
-        element:<MyBids></MyBids>,
-        loader:()=>fetch(`https://server-psi-navy.vercel.app/usersBids`)
+        element:<Private><MyBids></MyBids></Private>,
+        
       },{
         path:'/webBazaar/bidRequests',
-        element:<BidRequests></BidRequests>
+        element:<Private><BidRequests></BidRequests></Private>
       },{
         path:'/login',
         element:<Login></Login>
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
         element:<Register></Register>
       },{
         path:'/jobs/:id',
-        element:<JobDetails></JobDetails>,
+        element:<Private><JobDetails></JobDetails></Private>,
         loader:({params})=>fetch(`https://server-psi-navy.vercel.app/addJobs/${params.id}`)
       },{
        

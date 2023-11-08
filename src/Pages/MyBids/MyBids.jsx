@@ -5,7 +5,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import Loading from "../../Loading";
 import { useQuery } from "@tanstack/react-query";
 import Footer from "../../Shared/Footer";
-import { useLoaderData } from "react-router-dom";
+
 import Swal from "sweetalert2";
 
 const MyBids = () => {

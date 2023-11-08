@@ -50,7 +50,7 @@ const googleSignIn=()=>{
                 
 //                 axios.post(`https://server-psi-navy.vercel.app/jwt`,loggedInUser,{withCredentials:true})
 //                 .then(res=>
-//                     {console.log('token respoond',res.data)})
+//                     {console.log('token respond',res.data)})
 //             }
 //             else{
 //                 axios.post('https://server-psi-navy.vercel.app/logout',loggedInUser,{
