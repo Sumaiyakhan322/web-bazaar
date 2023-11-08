@@ -27,15 +27,10 @@ const handleRegister = (e) => {
   if (password.length < 6) {
     setError("The length of your password must be more than 6 digit");
     return;
+  } else if (!/[A-Z]/.test(password)) {
+    setError("Your password must have one Capital letter");
+    return;
   } 
-//   else if (!/[A-Z]/.test(password)) {
-//     setError("Your password must have one Capital letter");
-//     return;
-//   } else if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)) {
-//     setError("Your password must have one special character");
-//     return;
-//   }
-
   createUser(email, password)
     .then((result) => {
       updateProfile(result.user, {
