@@ -1,5 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import NavBar from "../../Shared/NavBar";
+import Footer from "../../Shared/Footer";
 
 
 const UpdateJobs = () => {
@@ -16,7 +18,7 @@ const UpdateJobs = () => {
         const maximum=e.target.maximum.value ;
         const des=e.target.des.value ;
         const updateJob={email,jobTile,img,deadline,category,minimum,maximum,des}
-        fetch(`http://localhost:5000/addJobs/${_id}`,{
+        fetch(`https://server-psi-navy.vercel.app/addJobs/${_id}`,{
           method:'PUT',
           headers: {
               "Content-Type": "application/json",
@@ -49,8 +51,9 @@ const UpdateJobs = () => {
     }
     return (
         <div>
+          <NavBar></NavBar>
              <div className='max-w-6xl mx-auto md:p-0 p-4'>
-     <h1 className='headings text-center my-10 text-3xl md:text-5xl'> Add New Jobs</h1>
+     <h1 className='headings text-center my-10 text-3xl md:text-5xl'> Update your jobs</h1>
      <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent  w-10/12 via-[#193e51] to-transparent opacity-25 dark:opacity-100 center" />
 
      {/* form  */}
@@ -140,6 +143,7 @@ const UpdateJobs = () => {
         </form>
       </div>
     </div> 
+    <Footer></Footer>
         </div>
     );
 };

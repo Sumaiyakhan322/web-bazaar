@@ -9,7 +9,7 @@ const BidOnProject = () => {
   const navigate=useNavigate()
   
   const {
-    email, deadline,maximum,minimum,
+    email, deadline,maximum,minimum,jobTile
   } = jobs;
   const { user } = useContext(AuthContext);
   const userEmail=user?.email
@@ -23,8 +23,13 @@ const BidOnProject = () => {
     const buyerEmail=e.target.buyerEmail.value;
     const deadline=e.target.deadline.value;
     const price=e.target.price.value;
-    const addUserBid={userEmail,buyerEmail,deadline,price}
-    fetch('http://localhost:5000/usersBids',{
+    const status='pending';
+    const disable="true";
+    
+    
+    const jobTile=e.target.jobTitle.value;
+    const addUserBid={userEmail,buyerEmail,deadline,price,status,jobTile,disable}
+    fetch('https://server-psi-navy.vercel.app/usersBids',{
             method:'POST',
             headers: {
                 "Content-Type": "application/json",
@@ -69,6 +74,19 @@ const BidOnProject = () => {
               readOnly
               id="buyer-email"
               value={email ? email :''}
+            />
+          </div>
+          <div className="relative h-12 w-full my-10 ">
+            <label htmlFor="job-title" className="text-[#194a63] font-bold ">
+              Job-title:
+            </label>
+            <input
+              className="border border-[#c3bd2e] input input-bordered w-full"
+              type="text"
+              name="jobTitle"
+              readOnly
+              id="job-title"
+              value={jobTile ? jobTile :''}
             />
           </div>
 

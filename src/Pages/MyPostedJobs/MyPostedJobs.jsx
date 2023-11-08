@@ -17,7 +17,7 @@ const MyPostedJobs = () => {
     const { isPending, error, data,refetch } = useQuery({
         queryKey: ["postedJobs"],
         queryFn:  async() =>{
-       return  await fetch("http://localhost:5000/addJobs")
+       return  await fetch("https://server-psi-navy.vercel.app/addJobs")
        .then(
         (res) => res.json(),)
        
@@ -46,7 +46,7 @@ const MyPostedJobs = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/addJobs/${_id}`, {
+        fetch(`https://server-psi-navy.vercel.app/addJobs/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

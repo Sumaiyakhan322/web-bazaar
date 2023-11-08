@@ -40,12 +40,12 @@ const router = createBrowserRouter([
       },{
         path:'/jobs/:id',
         element:<JobDetails></JobDetails>,
-        loader:({params})=>fetch(`http://localhost:5000/addJobs/${params.id}`)
+        loader:({params})=>fetch(`https://server-psi-navy.vercel.app/addJobs/${params.id}`)
       },{
        
         path:'/update/:id',
         element:<UpdateJobs></UpdateJobs>,
-        loader:({params})=>fetch(`http://localhost:5000/addJobs/${params.id}`)
+        loader:({params})=>fetch(`https://server-psi-navy.vercel.app/addJobs/${params.id}`)
       }
     
     ]

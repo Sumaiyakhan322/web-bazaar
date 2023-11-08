@@ -20,7 +20,7 @@ const AddJobsForm = () => {
         const des=e.target.des.value ;
         const newProduct={email,jobTile,deadline,category,maximum,minimum,des,img}
         
-        fetch('http://localhost:5000/addJobs',{
+        fetch('https://server-psi-navy.vercel.app/addJobs',{
             method:'POST',
             headers: {
                 "Content-Type": "application/json",

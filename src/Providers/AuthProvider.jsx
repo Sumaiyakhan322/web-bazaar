@@ -2,6 +2,7 @@ import  { createContext, useEffect, useState } from 'react';
 import PropTypes from "prop-types";
 import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import app from '../Firebase/firebase_config';
+import axios from 'axios';
 const auth = getAuth(app);
 const GoogleProvider = new GoogleAuthProvider();
 
@@ -23,6 +24,7 @@ const AuthProvider = ({children}) => {
     setLoading(true)
     return signInWithEmailAndPassword(auth,email,password)
 }
+//logout
 
 // sign out user
 const SignOutUser=()=>{
@@ -36,18 +38,46 @@ const googleSignIn=()=>{
 }
 
 
-// get the user info by auth changed
- useEffect(()=>{
-    const unSubscribe=onAuthStateChanged(auth,currentUser=>{
-        setUser(currentUser);
-        setLoading(false);
-    })
-    return()=>{
-    unSubscribe()
-    }
- },[])
+// // get the user info by auth changed
+//  useEffect(()=>{
+//     const unSubscribe =  onAuthStateChanged(auth,currentUser=>{
+//         const userEmail=currentUser?.email || user?.email
+//         const loggedInUser={email:userEmail}
+//             setUser(currentUser)
+//             setLoading(false)
+//             //user exited issue an token
+//             if(currentUser){
+                
+//                 axios.post(`https://server-psi-navy.vercel.app/jwt`,loggedInUser,{withCredentials:true})
+//                 .then(res=>
+//                     {console.log('token respoond',res.data)})
+//             }
+//             else{
+//                 axios.post('https://server-psi-navy.vercel.app/logout',loggedInUser,{
+//                     withCredentials:true
+//                 })
+//                 .then(res=>{
+//                     console.log('logout',res.data);
+//                 })
+//             }
+//         })
+//     return()=>{
+//     unSubscribe()
+//     }
+//  },[user])
 
- const authInfo={user,loginUser,SignOutUser,createUser,loading,googleSignIn}
+useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, currentUser => {
+        setUser(currentUser);
+        console.log('current user', currentUser);
+        setLoading(false);
+    });
+    return () => {
+        return unsubscribe();
+    }
+}, [])
+
+ const authInfo={user,loginUser,SignOutUser,createUser,loading,googleSignIn,}
  return (
     <AuthContext.Provider value={authInfo}>
         {children}
