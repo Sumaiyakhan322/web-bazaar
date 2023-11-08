@@ -36,9 +36,9 @@ const MyBids = () => {
 
 const handleStatus=(_id)=>{
   
-    const status='In progress';
-   
-    const newStatusDisable={status}
+    const status='Complete';
+    const disable='false' ;
+    const newStatusDisable={status,disable}
     
     fetch(`http://localhost:5000/usersBids/${_id}`,{
       method:'PATCH',
@@ -92,7 +92,7 @@ const handleStatus=(_id)=>{
         <td>{bid.status}</td>
         {/* <td><button className=''>Complete</button></td> */}
         {
-          bid.status=='In progress' &&  <td><button className='' onClick={()=>handleStatus(bid._id)}>Complete</button></td>
+         bid.status=='In progress'  ? <td><button className='' onClick={()=>handleStatus(bid._id)}>Complete</button></td> : <td></td>
         }
       </tr>
 
