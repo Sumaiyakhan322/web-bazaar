@@ -14,7 +14,7 @@ const AddJobs = () => {
     return (
         <div>
             <NavBar></NavBar>
-            <AddJobsForm></AddJobsForm>
+            <div className='my-20'><AddJobsForm></AddJobsForm></div>
             <Footer></Footer>
         </div>
     );

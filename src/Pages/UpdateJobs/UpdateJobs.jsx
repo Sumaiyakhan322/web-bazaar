@@ -52,7 +52,7 @@ const UpdateJobs = () => {
     return (
         <div>
           <NavBar></NavBar>
-             <div className='max-w-6xl mx-auto md:p-0 p-4'>
+             <div className='max-w-6xl mx-auto md:p-0 p-4 my-20'>
      <h1 className='headings text-center my-10 text-3xl md:text-5xl'> Update your jobs</h1>
      <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent  w-10/12 via-[#193e51] to-transparent opacity-25 dark:opacity-100 center" />
 

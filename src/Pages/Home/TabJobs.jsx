@@ -51,7 +51,7 @@ const TabJobs = () => {
       </h1>
       <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent  w-10/12 via-[#193e51] to-transparent opacity-25 dark:opacity-100 center" />
       <Tabs >
-        <TabList >
+        <TabList className='text-[#193e51] font-bold ' >
           <Tab>All job</Tab>
           <Tab onClick={() => handleTab("Web development")}>Web development</Tab>
           <Tab onClick={() => handleTab("Digital marketing")}>Digital marketing</Tab>
@@ -60,28 +60,28 @@ const TabJobs = () => {
           </Tab>
         </TabList>
         <TabPanel>
-          <div className="grid grid-cols-1 w-full place-items-center gap-4 my-8  p-6 md:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto p-4 md:p-0 gap-10 my-20">
             {data.map((job) => (
               <Card job={job} key={job._id}></Card>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid grid-cols-1 w-full place-items-center gap-8 my-8  p-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto p-4 md:p-0 gap-10 my-20">
             {web.map((job) => (
               <Card job={job} key={job._id}></Card>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid grid-cols-1 w-full place-items-center gap-8 my-8  p-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto p-4 md:p-0 gap-10 my-20">
             {digital.map((job) => (
               <Card job={job} key={job._id}></Card>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid grid-cols-1 w-full place-items-center gap-8 my-8  p-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto p-4 md:p-0 gap-10 my-20 ">
             {graphics.map((job) => (
               <Card job={job} key={job._id}></Card>
             ))}

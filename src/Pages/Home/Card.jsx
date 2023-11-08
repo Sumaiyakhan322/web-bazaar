@@ -6,23 +6,30 @@ const Card = ({job}) => {
    
   
     return (
-        <div className="h-full">
-            <div className="card bg-base-100 shadow-xl border border-black">
-  <figure className="p-4  border border-pink-700 h-[200px] ">
-    <img src={img} alt="Shoes" className="rounded-xl border border-green-600 h-full w-full" />
-  </figure>
-  <div className="card-body items-center text-center border-red-900 border flex flex-col ">
-    <h2 className="card-title">{jobTile}</h2>
-    <p className="text-center ">{des}</p>
-    <p>{deadline}</p>
-    <p>{maximum}$-{minimum}$</p>
-    <div className="card-actions flex-grow">
-      <Link to={`/jobs/${_id}`}><button className="btn btn-primary"> Bit </button></Link>
+
+
+<div className="card lg:card-side bg-brown-50-50 shadow-xl  h-full  ">
+    <figure className=" md:w-5/12 w-full h-full">
+      <img className=" h-[200px] md:h-full w-full opacity-70"
+      src={img}
+        alt="Product"
+      />
+    </figure>
+    <div className="card-body text-lg w-1/2 space-y-2">
+      <h2 className=" text-2xl">Job-title:<span className="font-bold text-[#146666]">{jobTile}</span></h2>
+      <p className="text-justify ">{des.slice(0,150)}</p>
+    <p><span className="text-[#146666] font-semibold text-justify">Deadline:</span>{deadline}</p>
+     <p><span className="text-[#146666] font-semibold text-justify">Price:</span>{maximum}$-{minimum}$</p>
+    
+
+     <div className="card-actions flex-grow mx-auto">
+<Link to={`/jobs/${_id}`}><button className="className=' p-4 btn bg-[#146666] text-[#ffffff] hover:bg-[#6b8783] "> Bit Now </button></Link>
+</div>
     </div>
   </div>
-</div>
-        </div>
     );
 };
 
 export default Card;
+
+

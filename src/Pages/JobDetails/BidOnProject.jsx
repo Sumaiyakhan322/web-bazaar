@@ -1,4 +1,4 @@
-import { useContext, useState} from "react";
+import { useContext} from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import "../../Styles/Disable.css";
@@ -139,7 +139,7 @@ const BidOnProject = () => {
           <input
             type="submit"
             value="Add Product"
-            className={`block md:w-1/4 w-11/12 rounded text-[#fcf540] bg-gradient-to-r from-[#193e51] to-[#146666] px-7 pb-2.5 pt-3 text-sm font-medium uppercase mx-auto ${isButtonDisabled ? 'disabled' : ''}`}
+            className={`block md:w-2/4 w-11/12 rounded text-[#fcf540] bg-gradient-to-r from-[#193e51] to-[#146666] px-7 pb-2.5 pt-3 text-sm font-medium uppercase mx-auto ${isButtonDisabled ? 'disabled' : ''}`}
             disabled={isButtonDisabled}/>
          
         </form>
