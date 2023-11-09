@@ -15,7 +15,7 @@ const Card = ({job}) => {
         alt="Product"
       />
     </figure>
-    <div className="card-body text-lg w-1/2 space-y-2">
+    <div className="card-body text-lg md:w-1/2 space-y-2 w-full ">
       <h2 className=" text-2xl">Job-title:<span className="font-bold text-[#146666]">{jobTile}</span></h2>
       <p className="text-justify ">{des.slice(0,150)}</p>
     <p><span className="text-[#146666] font-semibold text-justify">Deadline:</span>{deadline}</p>

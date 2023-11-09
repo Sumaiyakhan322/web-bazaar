@@ -12,7 +12,7 @@ const AuthProvider = ({children}) => {
     
     const [loading,setLoading]=useState(true);
      
-     
+     const [count,setCount]=useState(1)
 
    //create user 
    const createUser=(email,password)=>{
@@ -47,7 +47,7 @@ const googleSignIn=()=>{
 //             setLoading(false)
 //             //user exited issue an token
 //             if(currentUser){
-                
+                  
 //                 axios.post(`https://server-psi-navy.vercel.app/jwt`,loggedInUser,{withCredentials:true})
 //                 .then(res=>
 //                     {console.log('token respond',res.data)})
@@ -77,7 +77,7 @@ useEffect(() => {
     }
 }, [])
 
- const authInfo={user,loginUser,SignOutUser,createUser,loading,googleSignIn,}
+ const authInfo={user,loginUser,SignOutUser,createUser,loading,googleSignIn,count,setCount}
  return (
     <AuthContext.Provider value={authInfo}>
         {children}

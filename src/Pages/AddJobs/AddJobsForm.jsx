@@ -6,7 +6,7 @@ import { AuthContext } from '../../Providers/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 const AddJobsForm = () => {
     const navigate=useNavigate()
-    const {user}=useContext(AuthContext)
+    const {user,count,setCount}=useContext(AuthContext)
     const userEmail=user?.email;
     const handleAdd=e=>{
         e.preventDefault();
@@ -30,6 +30,7 @@ const AddJobsForm = () => {
               .then((res) => res.json())
               .then((data) => {
                 console.log(data);
+               
                 if(data.insertedId){
                     Swal.fire({
                         position: 'center',
@@ -41,8 +42,9 @@ const AddJobsForm = () => {
                 }
                 
               });
+              setCount(count=>count+1)
               e.target.reset();
-            navigate('/webBazaar/myPostedJobs')
+              navigate('/webBazaar/myPostedJobs')
         
         
     }

@@ -46,7 +46,7 @@ const NavBar = () => {
            {navLinks}
             </ul>
           </div>
-          <span className="text-4xl text-[#c3bd2e] flex"><FaConnectdevelop></FaConnectdevelop>WebBazaar</span>
+       <Link to={'/'}> <span className="cursor-pointer text-4xl text-[#c3bd2e] flex"><FaConnectdevelop></FaConnectdevelop>WebBazaar</span></Link>  
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 font-bold text-base space-x-2 text-white ">

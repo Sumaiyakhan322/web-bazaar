@@ -12,7 +12,7 @@ const BidRequestTable = () => {
     const { isPending, error, data,refetch } = useQuery({
       queryKey: ["bidJobs"],
       queryFn:  async() =>{
-     return  await fetch(`http://localhost:5000/usersBids`)
+     return  await fetch(`https://server-psi-navy.vercel.app/usersBids`)
      .then(
       (res) => res.json(),)
      
@@ -32,7 +32,7 @@ const BidRequestTable = () => {
       const disable='false' ;
       const newStatusDisable={status,disable}
       
-      fetch(`http://localhost:5000/usersBids/${_id}`,{
+      fetch(`https://server-psi-navy.vercel.app/usersBids/${_id}`,{
         method:'PATCH',
         headers: {
             "Content-Type": "application/json",
@@ -63,7 +63,7 @@ const BidRequestTable = () => {
       const disable='false' ;
       const newStatusDisable={status,disable}
       
-      fetch(`http://localhost:5000/usersBids/${_id}`,{
+      fetch(`https://server-psi-navy.vercel.app/usersBids/${_id}`,{
         method:'PATCH',
         headers: {
             "Content-Type": "application/json",

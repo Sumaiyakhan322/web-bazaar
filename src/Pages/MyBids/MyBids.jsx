@@ -1,34 +1,26 @@
-import { useContext} from "react";
+import { useContext, useEffect, useState} from "react";
 import NavBar from "../../Shared/NavBar";
 import useDocumentTitle from "../../Title/useDocumentTitle";
 import { AuthContext } from "../../Providers/AuthProvider";
-import Loading from "../../Loading";
-import { useQuery } from "@tanstack/react-query";
+
 import Footer from "../../Shared/Footer";
 
 import Swal from "sweetalert2";
 
 const MyBids = () => {
   useDocumentTitle("WebBazaar|MyBids");
-  const { user } = useContext(AuthContext);
+  const { user,count,setCount } = useContext(AuthContext);
  
+  const [data,setData]=useState([])
   
-  const { isPending, error, data,refetch } = useQuery({
-    queryKey: ["myBids"],
-    queryFn:  async() =>{
-   return  await fetch(`http://localhost:5000/usersBids`)
-   .then(
-    (res) => res.json(),)
-   
-    
-  }
-  });
-
-  if (isPending) return <Loading></Loading>;
-
-
-
-  if (error) return "An error has occurred: " + error.message;
+  useEffect(()=>{
+    const getData= async()=>{
+     const res=await fetch("https://server-psi-navy.vercel.app/usersBids")
+     const result=await res.json();
+     setData(result)
+    }
+     getData()
+ },[count])
 
 
   const bids=data.filter(bid=>bid.userEmail==user?.email)
@@ -40,7 +32,7 @@ const handleStatus=(_id)=>{
     const disable='false' ;
     const newStatusDisable={status,disable}
     
-    fetch(`http://localhost:5000/usersBids/${_id}`,{
+    fetch(`https://server-psi-navy.vercel.app/usersBids/${_id}`,{
       method:'PATCH',
       headers: {
           "Content-Type": "application/json",
@@ -59,7 +51,7 @@ const handleStatus=(_id)=>{
                   timer: 1500
                 })
           }
-          refetch()
+          setCount(count=>count+1)
         });
 }
 
@@ -74,10 +66,10 @@ const handleStatus=(_id)=>{
         <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent  w-10/12 via-[#193e51] to-transparent opacity-25 dark:opacity-100 center" />
  <div className="overflow-x-auto my-16">
   
-  <table className="table">
+  <table className="table ">
     {/* head */}
-    <thead>
-      <tr className="text-[#146666] font-bold text-xl">
+    <thead className="">
+      <tr className="text-[#146666] font-bold text-xl  ">
         
         <th>Job-Title</th>
         <th>Buyer Email</th>
@@ -85,9 +77,9 @@ const handleStatus=(_id)=>{
         <th>Status</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody className="">
       {bids.map(bid=>(
-        <tr key={bid._id}>
+        <tr key={bid._id} className="">
         <td>{bid.jobTile}</td>
         <td>{bid.buyerEmail}</td>
         <td>{bid.deadline}</td>

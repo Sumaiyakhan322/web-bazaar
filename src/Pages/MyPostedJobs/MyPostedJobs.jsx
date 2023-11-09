@@ -1,9 +1,8 @@
-import { useQuery } from "@tanstack/react-query";
-import Loading from "../../Loading";
+
 import Footer from "../../Shared/Footer";
 import NavBar from "../../Shared/NavBar";
 import useDocumentTitle from "../../Title/useDocumentTitle";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -11,23 +10,33 @@ import Swal from "sweetalert2";
 
 const MyPostedJobs = () => {
     useDocumentTitle('WebBazaar|MyPostedJobs')
-    const {user}=useContext(AuthContext)
+    const {user,count,setCount}=useContext(AuthContext)
+    const [data,setData]=useState([])
     const userEmail=user?.email;
-
-    const { isPending, error, data,refetch } = useQuery({
-        queryKey: ["postedJobs"],
-        queryFn:  async() =>{
-       return  await fetch("https://server-psi-navy.vercel.app/addJobs")
-       .then(
-        (res) => res.json(),)
+    console.log(count);
+   
+    // const { isPending, error, data,refetch } = useQuery({
+    //     queryKey: ["postedJobs"],
+    //     queryFn:  async() =>{
+    //    return  await fetch("https://server-psi-navy.vercel.app/addJobs")
+    //    .then(
+    //     (res) => res.json(),)
        
         
-      }
-      });
+    //   }
+    //   });
+    //   refetch()
+    //   if (isPending) return <Loading></Loading>;
     
-      if (isPending) return <Loading></Loading>;
-    
-      if (error) return "An error has occurred: " + error.message;
+    //   if (error) return "An error has occurred: " + error.message;
+    useEffect(()=>{
+       const getData= async()=>{
+        const res=await fetch("https://server-psi-navy.vercel.app/addJobs")
+        const result=await res.json();
+        setData(result)
+       }
+        getData()
+    },[count])
      
 
       const getTheJobsOfTheUser=data.filter(user=>user.email===userEmail)
@@ -55,7 +64,7 @@ const MyPostedJobs = () => {
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "Your Product has been deleted.", "success");
             }
-           refetch()
+           setCount(count=>count+1)
           });
       }
     });

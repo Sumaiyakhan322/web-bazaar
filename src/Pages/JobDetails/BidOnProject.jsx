@@ -11,7 +11,7 @@ const BidOnProject = () => {
   const {
     email, deadline,maximum,minimum,jobTile
   } = jobs;
-  const { user } = useContext(AuthContext);
+  const { user,setCount } = useContext(AuthContext);
   const userEmail=user?.email
   const newDate=new Date()
   const deadlineDate=new Date(deadline)
@@ -45,11 +45,12 @@ const BidOnProject = () => {
                         icon: 'success',
                         title: 'A bid is successfully added',
                         showConfirmButton: false,
-                        timer: 2500
+                        timer: 500
                       })
                 }
                 
               });
+              setCount(count=>count+1)
               e.target.reset();
               
               navigate('/webBazaar/myBids')
@@ -138,7 +139,7 @@ const BidOnProject = () => {
 
           <input
             type="submit"
-            value="Add Product"
+            value="Bid on the job"
             className={`block md:w-2/4 w-11/12 rounded text-[#fcf540] bg-gradient-to-r from-[#193e51] to-[#146666] px-7 pb-2.5 pt-3 text-sm font-medium uppercase mx-auto ${isButtonDisabled ? 'disabled' : ''}`}
             disabled={isButtonDisabled}/>
          
