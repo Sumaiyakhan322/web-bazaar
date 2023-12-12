@@ -66,7 +66,7 @@ const BidOnProject = () => {
           {/* email of the buyer */}
 
           <div className="relative h-12 w-full my-10 ">
-            <label htmlFor="buyer-email" className="text-[#194a63] font-bold ">
+            <label htmlFor="buyer-email" className="text-[#e2e549] font-bold ">
               Buyer Email:
             </label>
             <input
@@ -79,7 +79,7 @@ const BidOnProject = () => {
             />
           </div>
           <div className="relative h-12 w-full my-10 ">
-            <label htmlFor="job-title" className="text-[#194a63] font-bold ">
+            <label htmlFor="job-title" className="text-[#e2e549] font-bold ">
               Job-title:
             </label>
             <input
@@ -94,7 +94,7 @@ const BidOnProject = () => {
 
           {/* Price */}
           <div className="relative h-12  w-full my-10 ">
-            <label htmlFor="price" className="text-[#194a63] font-bold">
+            <label htmlFor="price" className="text-[#e2e549] font-bold">
               Price 
             </label>
             <input
@@ -110,7 +110,7 @@ const BidOnProject = () => {
           {/* Deadline */}
 
           <div className="relative h-12 w-full my-10">
-            <label htmlFor="deadline" className="text-[#194a63] font-bold">
+            <label htmlFor="deadline" className="text-[#e2e549] font-bold">
               Deadline:
             </label>
             <input
@@ -125,7 +125,7 @@ const BidOnProject = () => {
 
           {/* User email */}
           <div className="relative h-12 w-full my-10">
-            <label htmlFor="user-email" className="text-[#194a63] font-bold">
+            <label htmlFor="user-email" className="text-[#e2e549] font-bold">
               User-email
             </label>
             <input
@@ -140,7 +140,7 @@ const BidOnProject = () => {
           <input
             type="submit"
             value="Bid on the job"
-            className={`block md:w-2/4 w-11/12 rounded text-[#fcf540] bg-gradient-to-r from-[#193e51] to-[#146666] px-7 pb-2.5 pt-3 text-sm font-medium uppercase mx-auto ${isButtonDisabled ? 'disabled' : ''}`}
+            className={`block md:w-2/4 w-11/12 rounded text-[#fcf540] bg-black px-7 pb-2.5 pt-3 text-sm font-medium uppercase mx-auto ${isButtonDisabled ? 'disabled' : ''}`}
             disabled={isButtonDisabled}/>
          
         </form>

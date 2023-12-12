@@ -32,7 +32,7 @@ const OurFeature = () => {
       </div>
 
       <div>
-        <h3 className="mb-3 text-2xl font-bold">Wed development</h3>
+        <h3 className="mb-3 text-2xl font-bold text-[#c3bd2e]">Wed development</h3>
         <div
           className="mb-3 flex items-center justify-center text-sm font-medium text-[#c3bd2e] dark:text-danger-500 md:justify-start">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
@@ -46,7 +46,7 @@ const OurFeature = () => {
           <small>Published <u>13.01.2022</u> </small>
            
         </p>
-        <p className="text-gray-700">
+        <p className="text-white">
         Back-End Developers focus on server-side development, database management, and the core functionality of websites and applications. They work with server-side languages and databases to ensure the websites functionality and performance.Quality Assurance Engineers are responsible for testing and verifying that web applications and websites function correctly and meet quality standards. They identify and report bugs, ensuring a smooth user experience.
         </p>
       </div>
@@ -66,7 +66,7 @@ const OurFeature = () => {
       </div>
 
       <div className="md:order-1">
-        <h3 className="mb-3 text-2xl font-bold">Digital marketing</h3>
+        <h3 className="mb-3 text-2xl font-bold text-[#c3bd2e]">Digital marketing</h3>
         <div
           className="mb-3 flex items-center justify-center text-sm font-medium text-[#c3bd2e] dark:text-primary-400 md:justify-start">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
@@ -79,7 +79,7 @@ const OurFeature = () => {
         <p className="mb-6 text-[#146666] font-bold">
           <small>Published <u>12.01.2022</u></small>
         </p>
-        <p className="text-gray-700">
+        <p className="text-white">
         Social Media Managers handle an organizations presence on social platforms. They create and manage content, engage with the audience, and analyze performance to grow the brands social reach.Content Marketing Specialists are responsible for creating and distributing valuable content to attract and engage the target audience. They use blogs, articles, videos, and more to drive traffic and conversions.
         </p>
       </div>
@@ -99,7 +99,7 @@ const OurFeature = () => {
       </div>
 
       <div>
-        <h3 className="mb-3 text-2xl font-bold">Graphics design</h3>
+        <h3 className="mb-3 text-2xl font-bold text-[#c3bd2e]">Graphics design</h3>
         <div className="mb-3 flex items-center justify-center text-sm font-medium text-[#c3bd2e] md:justify-start">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
             stroke="currentColor" className="mr-2 h-5 w-5">
@@ -111,7 +111,7 @@ const OurFeature = () => {
         <p className="mb-6 text-[#146666] font-bold">
           <small>Published <u>10.01.2022</u></small>
         </p>
-        <p className="text-gray-700">
+        <p className="text-white">
         Motion Graphics Designers produce animated visuals and videos that can be used for marketing, advertising, or instructional purposes. They often work with software like Adobe After Effects.Packaging Designers focus on creating packaging for products that is not only functional but also visually appealing. They consider the products market positioning and target audience in their designs.
         </p>
       </div>

@@ -69,7 +69,7 @@ const handleStatus=(_id)=>{
   <table className="table ">
     {/* head */}
     <thead className="">
-      <tr className="text-[#146666] font-bold text-xl  ">
+      <tr className="text-[#e2e549] font-bold text-xl  ">
         
         <th>Job-Title</th>
         <th>Buyer Email</th>
@@ -86,7 +86,7 @@ const handleStatus=(_id)=>{
         <td className="font-semibold">{bid.status}</td>
         {/* <td><button className=''>Complete</button></td> */}
         {
-         bid.status=='In progress'  ? <td><button className='btn bg-[#146666] text-[#ffffff] hover:bg-[#6b8783]' onClick={()=>handleStatus(bid._id)}>Complete</button></td> : <td></td>
+         bid.status=='In progress'  ? <td><button className='btn bg-[#e2e549] text-[#ffffff] hover:bg-[#6b8783]' onClick={()=>handleStatus(bid._id)}>Complete</button></td> : <td></td>
         }
       </tr>
 

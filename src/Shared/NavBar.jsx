@@ -36,7 +36,7 @@ const NavBar = () => {
  </>
     return (
        <div>
-       <div className="navbar p-4 sticky inset-0  z-10  flex flex-col gap-5 md:flex-row justify-between  bg-[#193e51] ">
+       <div className="navbar p-4 sticky inset-0  z-10  flex flex-col gap-5 md:flex-row justify-between  bg-black ">
         <div className=" flex flex-col-reverse md:flex-row lg:navbar-start">
           <div className="dropdown  ">
             <label tabIndex={0} className="btn btn-ghost lg:hidden ">

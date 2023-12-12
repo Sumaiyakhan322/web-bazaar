@@ -11,7 +11,7 @@ const Home = () => {
         <div>
             <NavBar></NavBar>
             <Banner></Banner>
-           <div className="max-w-6xl mx-auto md:p-0 p-4 ">
+           <div className="max-w-6xl mx-auto md:p-0 p-4">
            <TabJobs></TabJobs>
            <Team></Team>
            <OurFeature></OurFeature>

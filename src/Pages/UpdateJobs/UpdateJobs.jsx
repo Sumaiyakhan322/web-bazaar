@@ -62,7 +62,7 @@ const UpdateJobs = () => {
             {/* email and job title */}
           <div className="flex flex-col md:flex-row gap-10 my-10">
           <div className="relative h-12 w-full flex items-center justify-center gap-2">
-          <label htmlFor="email" className='text-[#194a63] font-bold'>Email:</label><input
+          <label htmlFor="email" className='text-[#e2e549] font-bold'>Email:</label><input
       className="border border-[#c3bd2e] input input-bordered w-full"
       type='email' name="email" readOnly value={email ? email :''} id='email' 
     />
@@ -70,7 +70,7 @@ const UpdateJobs = () => {
    
   </div>
   <div className="relative h-12  w-full flex items-center justify-center gap-2">
-  <label htmlFor="title" className='text-[#194a63] font-bold'>Title:</label>
+  <label htmlFor="title" className='text-[#e2e549] font-bold'>Title:</label>
     <input 
     defaultValue={jobTile}
       className="border border-[#c3bd2e] input input-bordered w-full"
@@ -82,7 +82,7 @@ const UpdateJobs = () => {
           {/* Img and type */}
           <div className="flex flex-col md:flex-row gap-10 my-10">
           <div className="relative h-12 w-full flex items-center justify-center gap-2">
-          <label htmlFor="deadline" className='text-[#194a63] font-bold'>Deadline:</label> 
+          <label htmlFor="deadline" className='text-[#e2e549] font-bold'>Deadline:</label> 
     <input 
       className="border border-[#c3bd2e] input input-bordered w-full"
       placeholder="Deadline " type="date" name="deadline" required id='deadline' defaultValue={deadline}
@@ -90,7 +90,7 @@ const UpdateJobs = () => {
    
   </div>
   <div className="relative h-12 w-full flex items-center justify-center gap-2">
-  <label htmlFor="category" className='text-[#194a63] font-bold'>Category:</label> 
+  <label htmlFor="category" className='text-[#e2e549] font-bold'>Category:</label> 
   <select className="select select-bordered border-[#c3bd2e] input  w-full" id='category' name='category' defaultValue={category}>
   <option>Web development</option>
   <option>Digital marketing</option>
@@ -103,7 +103,7 @@ const UpdateJobs = () => {
           {/* minimum and maximum */}
           <div className="flex flex-col md:flex-row gap-10 my-10">
           <div className="relative h-12 w-full flex items-center justify-center gap-2">
-          <label htmlFor="min" className='text-[#194a63] font-bold'>Minimum($):</label>
+          <label htmlFor="min" className='text-[#e2e549] font-bold'>Minimum($):</label>
 
     <input
       className="border border-[#c3bd2e] input input-bordered w-full"
@@ -112,7 +112,7 @@ const UpdateJobs = () => {
     
   </div>
   <div className="relative h-12 w-full flex items-center justify-center gap-2">
-  <label htmlFor="max" className='text-[#194a63] font-bold'>Maximum($):</label>
+  <label htmlFor="max" className='text-[#e2e549] font-bold'>Maximum($):</label>
 
     <input
       className="border border-[#c3bd2e] input input-bordered w-full"
@@ -122,7 +122,7 @@ const UpdateJobs = () => {
   </div>
           </div>
           <div className="relative h-12 w-full flex items-center justify-center gap-2">
-  <label htmlFor="Img" className='text-[#194a63] font-bold'>Image:</label>
+  <label htmlFor="Img" className='text-[#e2e549] font-bold'>Image:</label>
 
     <input
       className="border border-[#c3bd2e] input input-bordered w-full"
@@ -133,7 +133,7 @@ const UpdateJobs = () => {
 
 
           <div className="relative h-32 w-full  flex items-center justify-center gap-2">
-          <label htmlFor="des" className='text-[#194a63] font-bold'>Description:</label>
+          <label htmlFor="des" className='text-[#e2e549] font-bold'>Description:</label>
           <textarea className="textarea border border-[#c3bd2e] w-full"  name='des' defaultValue={des} required ></textarea>
     
   </div>

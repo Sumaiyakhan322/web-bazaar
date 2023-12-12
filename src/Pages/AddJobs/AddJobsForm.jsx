@@ -59,7 +59,7 @@ const AddJobsForm = () => {
             {/* email and job title */}
           <div className="flex flex-col md:flex-row gap-10 my-10">
           <div className="relative h-12 w-full flex items-center justify-center gap-2">
-          <label htmlFor="email" className='text-[#194a63] font-bold'>Email:</label><input
+          <label htmlFor="email" className='text-[#e2e549] font-bold'>Email:</label><input
       className="border border-[#c3bd2e] input input-bordered w-full"
       type='email' name="email" readOnly value={userEmail ? userEmail :''} id='email' 
     />
@@ -67,7 +67,7 @@ const AddJobsForm = () => {
    
   </div>
   <div className="relative h-12  w-full flex items-center justify-center gap-2">
-  <label htmlFor="title" className='text-[#194a63] font-bold'>Title:</label>
+  <label htmlFor="title" className='text-[#e2e549] font-bold'>Title:</label>
     <input
       className="border border-[#c3bd2e] input input-bordered w-full"
       placeholder="Job-title " type="text" name="jobTile" required id='title'
@@ -78,7 +78,7 @@ const AddJobsForm = () => {
           {/* Img and type */}
           <div className="flex flex-col md:flex-row gap-10 my-10">
           <div className="relative h-12 w-full flex items-center justify-center gap-2">
-          <label htmlFor="deadline" className='text-[#194a63] font-bold'>Deadline:</label> 
+          <label htmlFor="deadline" className='text-[#e2e549] font-bold'>Deadline:</label> 
     <input 
       className="border border-[#c3bd2e] input input-bordered w-full"
       placeholder="Deadline " type="date" name="deadline" required id='deadline'
@@ -86,7 +86,7 @@ const AddJobsForm = () => {
    
   </div>
   <div className="relative h-12 w-full flex items-center justify-center gap-2">
-  <label htmlFor="category" className='text-[#194a63] font-bold'>Category:</label> 
+  <label htmlFor="category" className='text-[#e2e549] font-bold'>Category:</label> 
   <select className="select select-bordered border-[#c3bd2e] input  w-full" id='category' name='category' >
   <option>Web development</option>
   <option>Digital marketing</option>
@@ -99,7 +99,7 @@ const AddJobsForm = () => {
           {/* minimum and maximum */}
           <div className="flex flex-col md:flex-row gap-10 my-10">
           <div className="relative h-12 w-full flex items-center justify-center gap-2">
-          <label htmlFor="min" className='text-[#194a63] font-bold'>Minimum($):</label>
+          <label htmlFor="min" className='text-[#e2e549] font-bold'>Minimum($):</label>
 
     <input
       className="border border-[#c3bd2e] input input-bordered w-full"
@@ -108,7 +108,7 @@ const AddJobsForm = () => {
     
   </div>
   <div className="relative h-12 w-full flex items-center justify-center gap-2">
-  <label htmlFor="max" className='text-[#194a63] font-bold'>Maximum($):</label>
+  <label htmlFor="max" className='text-[#e2e549] font-bold'>Maximum($):</label>
 
     <input
       className="border border-[#c3bd2e] input input-bordered w-full"
@@ -118,7 +118,7 @@ const AddJobsForm = () => {
   </div>
           </div>
           <div className="relative h-12 w-full flex items-center justify-center gap-2">
-  <label htmlFor="Img" className='text-[#194a63] font-bold'>Image:</label>
+  <label htmlFor="Img" className='text-[#e2e549] font-bold'>Image:</label>
 
     <input
       className="border border-[#c3bd2e] input input-bordered w-full"
@@ -129,12 +129,12 @@ const AddJobsForm = () => {
 
 
           <div className="relative h-32 w-full  flex items-center justify-center gap-2">
-          <label htmlFor="des" className='text-[#194a63] font-bold'>Description:</label>
+          <label htmlFor="des" className='text-[#e2e549] font-bold'>Description:</label>
           <textarea className="textarea border border-[#c3bd2e] w-full" placeholder="Description" name='des' id='des' required></textarea>
     
   </div>
          
-     <input type="submit" value='Add Product' className="block md:w-1/4  w-11/12 rounded text-[#fcf540] bg-gradient-to-r from-[#193e51] to-[#146666]  px-7 pb-2.5 pt-3 text-sm font-medium uppercase  mx-auto" />  
+     <input type="submit" value='Add Product' className="block md:w-1/4  w-11/12 rounded text-[#fcf540] bg-gradient-to-r from-black to-[#146666]  px-7 pb-2.5 pt-3 text-sm font-medium uppercase  mx-auto" />  
           
         </form>
       </div>

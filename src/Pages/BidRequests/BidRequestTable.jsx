@@ -94,7 +94,7 @@ const BidRequestTable = () => {
   <table className="table">
     {/* head */}
     <thead>
-      <tr className='text-[#146666] font-bold text-xl '>
+      <tr className='text-[#e2e549] font-bold text-xl '>
         
         <th>Job-Title</th>
         <th>Email(who bid on projects)</th>
@@ -112,8 +112,8 @@ const BidRequestTable = () => {
         <td>{bid.price}</td>
         <td className='font-semibold'>{bid.status}</td>
        
-        {(bid.disable==='true' && bid.status==='pending') && <><td><button className='btn bg-[#146666] text-[#ffffff] hover:bg-[#6b8783]' onClick={()=>handleAccept(bid._id)}>Accept</button></td>
-        <td><button className='btn bg-[#146666] text-[#ffffff] hover:bg-[#6b8783] ' onClick={()=>handleReject(bid._id)}>Reject</button></td></>  }
+        {(bid.disable==='true' && bid.status==='pending') && <><td><button className='btn bg-[#e2e549] text-[#ffffff] hover:bg-[#6b8783]' onClick={()=>handleAccept(bid._id)}>Accept</button></td>
+        <td><button className='btn bg-[#e2e549] text-[#ffffff] hover:bg-[#6b8783] ' onClick={()=>handleReject(bid._id)}>Reject</button></td></>  }
       </tr>
 
       ))}

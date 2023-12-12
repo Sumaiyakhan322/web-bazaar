@@ -72,25 +72,25 @@ const MyPostedJobs = () => {
     return (
         <div>
             <NavBar></NavBar>
-<div className="max-w-6xl mx-auto p-4 md:p-0">
+<div className="max-w-6xl mx-auto p-4 md:p-0 ">
 <div className="grid lg:grid-cols-3 md:grid-cols-1 grid-cols-1 gap-6 my-20 ">
 {
             getTheJobsOfTheUser.map(job=>(
                 <div key={job._id}>
                  <div className="h-full">
-            <div className="card bg-base-100 shadow-xl border ">
+            <div className="card bg-gray-600 shadow-xl  border-yellow-500 border-2 ">
   <figure className="p-4  border  h-[200px] ">
     <img src={job.img} alt="Shoes" className="rounded-xl border  h-full w-full" />
   </figure>
   <div className="card-body items-center text-center  border flex flex-col h-full ">
-    <h2 className="card-title font-bold text-[#193e51]">{job.jobTile}</h2>
+    <h2 className="card-title font-bold text-[#e2e549]">{job.jobTile}</h2>
     <p className="text-center ">{job.des}</p>
-    <p className="text-[#193e51] font-bold">Deadline:{job.deadline}</p>
+    <p className="text-[#e2e549] font-bold">Deadline:{job.deadline}</p>
     
-    <p className="text-[#193e51] font-bold">{job.maximum}$-{job.minimum}$</p>
+    <p className="text-[#e2e549] font-bold">{job.maximum}$-{job.minimum}$</p>
     <div className="card-actions flex-grow my-8">
-      <button className='btn bg-[#146666] text-[#ffffff] hover:bg-[#6b8783]' onClick={()=>handleDelete(job._id)}>Delete</button>
-      <Link to={`/update/${job._id}`}><button className='btn bg-[#146666] text-[#ffffff] hover:bg-[#6b8783]' >Update</button></Link>
+      <button className='btn bg-black text-[#ffffff] hover:bg-[#6b8783]' onClick={()=>handleDelete(job._id)}>Delete</button>
+      <Link to={`/update/${job._id}`}><button className='btn bg-black text-[#ffffff] hover:bg-[#6b8783]' >Update</button></Link>
     </div>
   </div>
 </div>

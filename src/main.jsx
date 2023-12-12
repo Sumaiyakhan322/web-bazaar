@@ -17,10 +17,11 @@ const queryClient = new QueryClient()
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  
+  <div className=' bg-gradient-to-r from-black to-gray-800'>
   <QueryClientProvider client={queryClient}>
   <React.StrictMode>
   <AuthProvider> <RouterProvider router={router} /></AuthProvider>
  </React.StrictMode>
 </QueryClientProvider>
+</div>
 )

@@ -45,13 +45,13 @@ const TabJobs = () => {
   };
 
   return (
-    <div className="text-center mt-12">
+    <div className="text-center mt-12 ">
       <h1 className="headings text-center my-8 text-2xl  md:text-5xl font-bold ">
        All the Jobs 
       </h1>
       <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent  w-10/12 via-[#193e51] to-transparent opacity-25 dark:opacity-100 center" />
       <Tabs >
-        <TabList className='text-[#193e51] font-bold ' >
+        <TabList className='text-[#b3b53f] font-bold ' >
           <Tab>All job</Tab>
           <Tab onClick={() => handleTab("Web development")}>Web development</Tab>
           <Tab onClick={() => handleTab("Digital marketing")}>Digital marketing</Tab>

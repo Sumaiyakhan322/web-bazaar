@@ -37,10 +37,10 @@ const JobDetails = () => {
               />
             </figure>
             <div className="card-body items-center text-center  border flex flex-col  space-y-3">
-            <h2 className=" text-2xl">Job-title:<span className="font-bold text-[#146666]">{jobTile}</span></h2>
+            <h2 className=" text-2xl">Job-title:<span className="font-bold ">{jobTile}</span></h2>
       <p className="text-center ">{des}</p>
-    <p><span className="text-[#146666] font-bold text-justify">Deadline:</span>{deadline}</p>
-     <p><span className="text-[#146666] font-bold text-justify">Price:</span>{maximum}$-{minimum}$</p>
+    <p><span className="font-bold text-justify">Deadline:</span>{deadline}</p>
+     <p><span className=" font-bold text-justify">Price:</span>{maximum}$-{minimum}$</p>
               <div className="card-actions flex-grow"></div>
             </div>
           </div>

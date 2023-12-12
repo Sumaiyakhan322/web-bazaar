@@ -11,7 +11,7 @@ const Team = () => {
     <div className="grid gap-x-6 md:grid-cols-4 lg:gap-x-12 mt-36">
       <div className="mb-24 md:mb-0">
         <div
-          className="block h-full rounded-lg bg-white dark-bg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          className="block h-full rounded-lg bg-gray-600 dark-bg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
           <div className="flex justify-center">
             <div className="flex justify-center -mt-[75px]">
               <img src="https://mdbcdn.b-cdn.net/img/new/avatars/6.jpg"
@@ -53,7 +53,7 @@ const Team = () => {
 
       <div className="mb-24 md:mb-0">
         <div
-          className="block h-full rounded-lg bg-white dark-bg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          className="block h-full rounded-lg bg-gray-600 dark-bg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
           <div className="flex justify-center">
             <div className="flex justify-center -mt-[75px]">
               <img src="https://mdbcdn.b-cdn.net/img/new/avatars/8.jpg"
@@ -93,7 +93,7 @@ const Team = () => {
       </div>
       <div className="mb-24 md:mb-0">
         <div
-          className="block h-full rounded-lg bg-white dark-bg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          className="block h-full rounded-lg bg-gray-600 dark-bg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
           <div className="flex justify-center">
             <div className="flex justify-center -mt-[75px]">
               <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg"
@@ -134,7 +134,7 @@ const Team = () => {
 
       <div className="">
         <div
-          className="block h-full rounded-lg bg-white dark-bg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          className="block h-full rounded-lg bg-gray-600 dark-bg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
           <div className="flex justify-center">
             <div className="flex justify-center -mt-[75px]">
               <img src="https://mdbcdn.b-cdn.net/img/new/avatars/15.jpg"
