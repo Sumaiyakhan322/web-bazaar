@@ -1,6 +1,6 @@
 ## The website name is : WebBazaar
-## Live link of this website is:[Click here to go to WebBazaar  website ](//webbazaar-creations.web.app/
-)
+## Live link of this website is:[Click here to go to WebBazaar  website ](//webbazaar-creations.web.app/)
+
 
 ## The WebBazaar  is a website of many features
 

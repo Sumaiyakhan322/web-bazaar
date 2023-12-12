@@ -1,5 +1,5 @@
 .box{
-    background: repeating-conic-gradient(from var(--a),#193e51 0%, #193e51 5%,transparent 5% , transparent 40% , #193e51 50% );
+    background: repeating-conic-gradient(from var(--a),#fff34b 0%, #000000 5%,transparent 5% , transparent 40% , #193e51 50% );
     animation: animate 4s linear infinite;
     border-radius: 20px;
     position: relative;
@@ -28,7 +28,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    background: repeating-conic-gradient(from var(--a),#146666 0%, #146666 5%,transparent 5% , transparent 40% , #146666 50% );
+    background: repeating-conic-gradient(from var(--a),#54d620 0%, #c3f70a 5%,transparent 5% , transparent 40% , #146666 50% );
     animation: animate 4.5s linear infinite;
     animation-delay: -1s;
     border-radius: 20px;
