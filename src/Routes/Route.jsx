@@ -11,6 +11,7 @@ import Register from "../Pages/Register/Register";
 import JobDetails from "../Pages/JobDetails/JobDetails";
 import UpdateJobs from "../Pages/UpdateJobs/UpdateJobs";
 import Private from "../Private/Private";
+import DoText from "../Pages/DoText/DoText";
 
 const router = createBrowserRouter([
     {
@@ -48,6 +49,9 @@ const router = createBrowserRouter([
         path:'/update/:id',
         element:<UpdateJobs></UpdateJobs>,
         loader:({params})=>fetch(`https://server-psi-navy.vercel.app/addJobs/${params.id}`)
+      },{
+        path:'/doTest',
+        element:<DoText></DoText>
       }
     
     ]

@@ -103,7 +103,7 @@ const BidRequestTable = () => {
         <th>Status</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody className='text-white'>
       {bids.map(bid=>(
         <tr key={bid._id}>
         <td>{bid.jobTile}</td>

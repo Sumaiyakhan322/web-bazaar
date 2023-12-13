@@ -53,7 +53,7 @@ const BidOnProject = () => {
               setCount(count=>count+1)
               e.target.reset();
               
-              navigate('/webBazaar/myBids')
+              navigate('/doTest')
 
     
   };

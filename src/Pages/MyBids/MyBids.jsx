@@ -77,7 +77,7 @@ const handleStatus=(_id)=>{
         <th>Status</th>
       </tr>
     </thead>
-    <tbody className="">
+    <tbody className="text-white">
       {bids.map(bid=>(
         <tr key={bid._id} className="">
         <td>{bid.jobTile}</td>
